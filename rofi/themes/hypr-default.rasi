@@ -1,0 +1,140 @@
+* {
+    selected-normal-foreground:   rgba ( 51, 204, 255, 73 % );
+    foreground:                   #33ccffee;
+    alternate-normal-background:  rgba ( 255, 255, 255, 7 % );
+    red:                          rgba ( 220, 50, 47, 100 % );
+    selected-urgent-foreground:   rgba ( 51, 51, 51, 100 % );
+    blue:                         rgba ( 38, 139, 210, 100 % );
+    urgent-foreground:            #b00020ff;
+    alternate-urgent-background:  rgba ( 255, 255, 255, 7 % );
+    active-foreground:            rgba ( 170, 170, 17, 100 % );
+    lightbg:                      rgba ( 238, 232, 213, 100 % );
+    selected-active-foreground:   rgba ( 51, 51, 51, 100 % );
+    alternate-active-background:  rgba ( 255, 255, 255, 7 % );
+    background:                   #212121ee;
+    bordercolor:                  rgba ( 17, 170, 170, 100 % );
+    alternate-normal-foreground:  #4ba8ffee;
+    normal-background:            rgba ( 0, 0, 0, 0 % );
+    lightfg:                      rgba ( 88, 104, 117, 100 % );
+    selected-normal-background:   @foreground;
+    border-color:                 @foreground;
+    spacing:                      2;
+    separatorcolor:               #33ccffee;
+    urgent-background:            #b00020ee;
+    selected-urgent-background:   rgba ( 255, 153, 153, 100 % );
+    alternate-urgent-foreground:  @urgent-foreground;
+    background-color:             rgba ( 0, 0, 0, 0 % );
+    alternate-active-foreground:  #039BE5;
+    active-background:            rgba ( 0, 0, 0, 0 % );
+    selected-active-background:   #2648ab;
+    text-color:                   #e4f3ff;
+}
+window {
+    background-color: @background;
+    border:           1;
+    padding:          5;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+textbox {
+    text-color: @text-color;
+}
+listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @text-color;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @text-color;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @background;
+}
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @text-color;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @text-color;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}

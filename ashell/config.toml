@@ -1,26 +1,19 @@
 log_level = "warn"
 outputs = "All"
 position = "Top"
-# app_launcher_cmd = "hyprlauncher"
-clipboard_cmd = "cliphist-rofi-img | wl-copy"
 
 [modules]
 left = [ [ "appLauncher", "Workspaces" ] ]
 center = [ "Clock" ]
-# right = [ "Updates", "SystemInfo", [  "Tray", "Privacy", "Settings" ] ]
-right = [ "SystemInfo" ]
+right = [ "SystemInfo", "Updates" ]
 
-# [updates]
-# check_cmd = "checkupdates; paru -Qua"
-# update_cmd = 'kitty -e bash -c "paru; echo Done - Press enter to exit; read" &'
+[updates]
+check_cmd = "checkupdates; paru -Qua"
+update_cmd = 'kitty -e bash -c "paru; echo Done - Press enter to exit; read" &'
 
 [workspaces]
+visibility_mode = "All"
 enable_workspace_filling = true
-
-# [[CustomModule]]
-# name = "appLauncher"
-# icon = "󱗼"
-# command = "hyprlauncher"
 
 [window_title]
 truncate_title_after_length = 100
@@ -43,24 +36,16 @@ alert_threshold = 90
 [system_info.temperature]
 warn_threshold = 60
 alert_threshold = 80
-sensor = "acpitz temp1"
+sensor = "coretemp Package id 0"
 
 [clock]
 format = "%a %d %B %I:%M %p"
 
-# [settings]
-# lock_cmd = "playerctl --all-players pause; nixGL hyprlock &"
-# audio_sinks_more_cmd = "pavucontrol -t 3"
-# audio_sources_more_cmd = "pavucontrol -t 4"
-# wifi_more_cmd = "nm-connection-editor"
-# vpn_more_cmd = "nm-connection-editor"
-# bluetooth_more_cmd = "blueberry"
-
 [appearance]
-font_name = "Open Sans Regular"
-opacity = 0.8
+font_name = "Playpen Sans Regular"
+opacity = 1.0
+style = "Solid"
 
-# primary_color = "#7aa2f7"
 primary_color = "#33ccff"
 success_color = "#9ece6a"
 text_color = "#a9b1d6"
@@ -68,7 +53,7 @@ text_color = "#a9b1d6"
 workspace_colors = [ "#33ccff", "#9ece6a" ]
 
 [appearance.danger_color]
-base = "#f7768e"
+base = "#b00020"
 weak = "#e0af68"
 
 [appearance.background_color]

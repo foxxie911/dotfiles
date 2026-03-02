@@ -1,13 +1,10 @@
 configuration {
-/*	modes: "window,drun,run,ssh";*/ 
 modes: "window,drun,run,ssh";
-/*	font: "mono 12";*/
-font: "FiraCode Nerd Font 11";
+font: "Playpen Sans Regular 11";
 /*	location: 0;*/
-/*	yoffset: 0;*/
-/*	xoffset: 0;*/
+yoffset: 10;
+xoffset: 10;
 /*	fixed-num-lines: true;*/
-/*	show-icons: false;*/
 show-icons: true;
 /*	preview-cmd: ;*/
 /*	on-selection-changed: ;*/
@@ -16,8 +13,8 @@ show-icons: true;
 /*	on-menu-canceled: ;*/
 /*	on-menu-error: ;*/
 /*	on-screenshot-taken: ;*/
-/*	terminal: "rofi-sensible-terminal";*/
-terminal: "kitty"";
+/*	terminal: "rofi-sensible-terminal";*/ 
+terminal: "kitty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -25,7 +22,7 @@ terminal: "kitty"";
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+icon-theme: "Papirus";
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
@@ -73,7 +70,6 @@ terminal: "kitty"";
 /*	imdkit: true;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
-/*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
 /*	display-drun: ;*/
@@ -172,4 +168,6 @@ terminal: "kitty"";
   }
 }
 
-@theme "/usr/share/rofi/themes/gruvbox-light-hard.rasi"
+@theme "themes/hypr-default.rasi"
+
+// @theme "/usr/share/rofi/themes/lb.rasi"
