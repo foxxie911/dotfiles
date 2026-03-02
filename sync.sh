@@ -11,7 +11,7 @@ folders[i3status]="$HOME/.config/i3status"
 folders[picom]="$HOME/.config/picom"
 folders[rofi]="$HOME/.config/rofi"
 folders[kitty]="$HOME/.config/kitty"
-folders[oh - my - posh]="$HOME/.config/oh-my-posh"
+folders[ohmyposh]="$HOME/.config/oh-my-posh"
 folders[CustomBinary]="$HOME/.local/bin"
 folders[wallpapers]="$HOME/.wallpapers"
 
@@ -33,11 +33,12 @@ git_commit() {
   git commit -m "$message"
 
   # Push changes to the origin repository
-  git push -u origin master
+  current_branch=$(git branch --show-current)
+  git push -u origin "$current_branch"
 }
 
 # Parse command-line arguments
-while [[ "$#" =~ ^- ]]; do
+while [[ "$1" == -* ]]; do
   case "$1" in
   -m | --message)
     shift
@@ -45,7 +46,7 @@ while [[ "$#" =~ ^- ]]; do
     git_commit "$1"
     ;;
   -v | --version)
-    echo "Version 1.2"
+    echo "Version 1.3"
     ;;
   esac
   shift
