@@ -1,6 +1,6 @@
 configuration {
 modes: "window,drun,run,ssh";
-font: "Playpen Sans Regular 11";
+font: "SF Pro Display Regular 11";
 /*	location: 0;*/
 yoffset: 10;
 xoffset: 10;
