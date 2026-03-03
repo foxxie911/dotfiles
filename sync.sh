@@ -6,6 +6,7 @@ declare -A folders
 # Specify config folder directories
 folders[i3]="$HOME/.config/i3"
 folders[hypr]="$HOME/.config/hypr"
+folders[waybar]="$HOME/.config/waybar"
 folders[ashell]="$HOME/.config/ashell"
 folders[i3status]="$HOME/.config/i3status"
 folders[picom]="$HOME/.config/picom"
