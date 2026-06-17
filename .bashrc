@@ -16,5 +16,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH=$PATH:/home/foxxie_911/.local/bin
 
 #oh-my-posh initialization
-eval "$(oh-my-posh init bash --config 'amro')"
+eval "$(oh-my-posh init bash --config 'space')"
 . "$HOME/.cargo/env"
