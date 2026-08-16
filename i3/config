@@ -10,9 +10,10 @@ bindsym $mod+Return exec $term
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
-#bindsym ctrl+space exec rofi -show run
+# bindsym ctrl+space exec rofi -show run
 bindsym $mod+d exec "rofi -show combi -modi window,run,combi -combi-modi window,run"
-#bindsym ctrl+space exec dmenu_run
+# bindsym ctrl+space exec dmenu_run
+# bindsym $mod+d exec dmenu_run
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+h focus left

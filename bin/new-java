@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# @author : MD. Sakibul Hakim (foxxie_911)
+
+PROJECT_NAME=""
+PROJECT_DESTINATION="/home/foxxie_911/Documents/java/"
+
+while [[ "$1" == -* ]]; do
+    case "$1" in
+	-d | --destination)
+        PROJECT_DESTINATION=$2
+        shift
+		;;
+	-n | --name)
+	    PROJECT_NAME=$2
+		shift
+		;;
+	*)
+		echo "No known argument with $1"
+		exit
+		;;
+    esac
+    shift
+done
+
+if [[ -z "$PROJECT_NAME" ]]; then
+    echo "Can't continue without a project name"
+    echo "Use -n | --name argument"
+    exit
+fi
+
+if [[ ! -d "$PROJECT_DESTINATION" ]]; then
+    echo "Given directory do not exist."
+    exit
+fi
+
+# Steps of the script:
+#   1. user invokes the script with a project name and location (optional)
+#   2. `cd` to the specified location, and if the location isn't given `cd` to a default location (e.g. `$HOME/Documents/`)
+#   3. creates a new directory with the project name and `cd` into it
+#   4. runs the project initialization command
+
+cd $PROJECT_DESTINATION
+mkdir $PROJECT_NAME
+cd $PROJECT_NAME
+
+# Java Gradle project initialization command:
+# ```bash
+# gradle init \
+#   --type java-application \
+#   --dsl kotlin \
+#   --test-framework junit-jupiter \
+#   --project-name PROJECT_NAME \
+#   --package org.foxxie911 \
+#   --java-version 25
+# ```
+
+gradle init \
+  --type java-application \
+  --dsl kotlin \
+  --test-framework junit-jupiter \
+  --project-name "$PROJECT_NAME" \
+  --package org.foxxie911 \
+  --java-version 25
