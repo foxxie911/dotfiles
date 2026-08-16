@@ -15,7 +15,8 @@ folders[kitty]="$HOME/.config/kitty"
 folders[ohmyposh]="$HOME/.config/oh-my-posh"
 folders[CustomBinary]="$HOME/.local/bin"
 folders[wallpapers]="$HOME/.wallpapers"
-forlders[ghostty]="$HOME/.config/ghostty/"
+folders[ghostty]="$HOME/.config/ghostty/"
+folders[alacritty]="$HOME/.config/alacritty/"
 folders[bashrc]="$HOME/.bashrc"
 
 # Iterate over folders and copy their contents to the current directory

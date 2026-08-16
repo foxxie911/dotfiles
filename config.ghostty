@@ -1,0 +1,62 @@
+# Ghostty Configuration
+
+# Font
+font-family = FiraCode Nerd Font
+font-family-bold = FiraCode Nerd Font Bold
+font-family-italic = FiraCode Nerd Font Italic
+font-family-bold-italic = FiraCode Nerd Font Bold Italic
+font-size = 11
+font-thicken = true
+font-feature = calt
+font-feature = liga
+
+# To DISABLE ligatures:
+# font-feature = -calt
+# font-feature = -liga
+
+# Window
+window-padding-x = 4
+window-padding-y = 8
+window-padding-balance = true
+window-save-state = always
+window-decoration = none
+window-show-tab-bar = never
+# window-theme = auto
+# window-inherit-working-directory = false
+# window-inherit-font-size = true
+
+# Opacity
+background-opacity = 0.9
+unfocused-split-opacity = 0.8
+
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Mouse
+mouse-hide-while-typing = true
+focus-follows-mouse = true
+
+# Clipboard
+clipboard-read = allow
+clipboard-write = allow
+
+# Scrollback
+scrollback-limit = 0
+
+# Theme
+theme = Atom One Dark
+bold-color = bright
+
+# Update
+auto-update = check
+auto-update-channel = stable
+
+# Notification
+desktop-notifications = true
+
+# GTK
+gtk-opengl-debug = false
+gtk-single-instance = true
+
